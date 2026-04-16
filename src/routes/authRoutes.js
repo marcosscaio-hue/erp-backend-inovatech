@@ -4,7 +4,7 @@ const prisma = require("../lib/prisma");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-const SECRET = "segredo_super"; // depois vamos melhorar isso
+const SECRET = process.env.JWT_SECRET; // depois vamos melhorar isso
 
 router.post("/login", async (req, res) => {
   try {

@@ -9,7 +9,7 @@ const supplierRoutes = require("./routes/supplierRoutes");
 const authMiddleware = require("./middlewares/authMiddleware");
 
 const app = express();
-const PORT = 3334;
+const PORT = process.env.PORT || 3334;
 
 app.use(cors());
 app.use(express.json());
